@@ -5,6 +5,21 @@ const csv = require("csv-parser");
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Ruta raiz
+app.get("/", (req, res) => {
+  res.send(`<!DOCTYPE html>
+  <html>
+  <head>
+      <title>API de Puntuaciones</title>
+  </head>
+  <body>
+      <h1>Bienvenido a la API de Puntuaciones de PIMEC 2023</h1>
+      <p>Para obtener la información de puntuaciones, accede a:</p>
+      <p><a href="/scores">/scores</a></p>
+  </body>
+  </html>`);
+});
+
 // Ruta para obtener la información desde el archivo CSV
 app.get("/scores", (req, res) => {
   const scores = [];
