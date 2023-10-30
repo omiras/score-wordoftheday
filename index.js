@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
   </head>
   <body>
       <h1>Bienvenido a la API de Puntuaciones de PIMEC 2023</h1>
-      <p>Para obtener la información de puntuaciones, accede a:</p>
-      <p><a href="/scores">/scores</a></p>
+      <p>Para obtener la información de puntuaciones, realiza una petición GET a:</p>
+      <p><a href="/scores">https://score-word-of-the-dat.onrender.com/scores</a></p>
   </body>
   </html>`);
 });
