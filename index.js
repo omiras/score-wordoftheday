@@ -1,9 +1,12 @@
 const express = require("express");
 const fs = require("fs");
 const csv = require("csv-parser");
+const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+app.use(cors());
 
 // Ruta raiz
 app.get("/", (req, res) => {
