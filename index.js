@@ -47,9 +47,9 @@ app.get("/vbeta/api/score", (req, res) => {
 
   if (randomChance < 0.90) {
     // Simula un mensaje de error en JSON con un código HTTP adecuado
-    res.status(503).json({
-      error: "There is high demand for requests to the API. Please try again later."
-    });
+    res.status(503).text(
+      "There is high demand for requests to the API. Please try again later."
+    );
   } else {
     // Lee el archivo CSV y responde con los datos
     const scores = [];
